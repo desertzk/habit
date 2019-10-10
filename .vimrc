@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'valloric/youcompleteme'
 Plug 'majutsushi/tagbar'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " Initialize plugin system
 call plug#end()
 
@@ -69,4 +70,4 @@ map <S-w> :Gwrite<CR>
 
 map <S-r> :Gread<CR>
 
-map <C-p> :FZF ~/<CR>
+map <C-p> :FZF /<CR>
