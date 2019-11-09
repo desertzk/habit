@@ -16,6 +16,8 @@ Plug 'kien/ctrlp.vim'
 Plug 'valloric/youcompleteme'
 Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'tpope/vim-surround'
+Plug 'dense-analysis/ale'
 " Initialize plugin system
 call plug#end()
 
@@ -56,18 +58,29 @@ let g:solarized_visibility=   "normal"
 let g:airline_theme='molokai'
 
 " NERDTree config
-map <F2> :NERDTreeToggle<CR>
+noremap <F2> :NERDTreeToggle<CR>
 "youcompleteme
 let g:ycm_global_ycm_extra_conf = '/.vim/plugged/youcompleteme/third_party/ycmd/.ycm_extra_conf.py'
 "let g:ycm_global_ycm_extra_conf ="~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py"
+noremap <F12> :YcmCompleter GoTo<CR>
+"map <F11> :YcmCompleter GoToDeclaration<CR>
 
 "tagbar
-map <F3> :TagbarToggle<CR>
+noremap <F3> :TagbarToggle<CR>
 "alt+d
-map <S-d> :Gdiffsplit<CR>
-map <S-s> :Gstatus<CR>
-map <S-w> :Gwrite<CR>
+noremap <S-d> :Gdiffsplit<CR>
+noremap <S-s> :Gstatus<CR>
+noremap <S-w> :Gwrite<CR>
 
-map <S-r> :Gread<CR>
+noremap <S-r> :Gread<CR>
 
-map <C-p> :FZF /<CR>
+noremap <C-p> :FZF /<CR>
+noremap <C-S-f> :Ag <CR>
+
+
+"python-mode
+"let g:pymode_rope_goto_definition_bind = '<F11>' //not working
+"let g:pymode_rope_goto_definition_cmd = 'vnew'
+
+set smartindent
+
