@@ -14,6 +14,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'valloric/youcompleteme'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tpope/vim-surround'
@@ -67,6 +68,8 @@ noremap <F12> :YcmCompleter GoTo<CR>
 
 "tagbar
 noremap <F3> :TagbarToggle<CR>
+"generate compile_commands.json for ycm
+noremap <F7> :! compiledb make<CR>
 "alt+d
 noremap <S-d> :Gdiffsplit<CR>
 noremap <S-s> :Gstatus<CR>
