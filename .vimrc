@@ -12,7 +12,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
 Plug 'valloric/youcompleteme'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'majutsushi/tagbar'
@@ -78,7 +78,7 @@ noremap <S-w> :Gwrite<CR>
 noremap <S-r> :Gread<CR>
 
 noremap <C-p> :FZF /<CR>
-noremap <C-S-f> :Ag <CR>
+noremap <C-f> :Rg <CR>
 
 
 "python-mode
