@@ -19,6 +19,7 @@ Plug 'majutsushi/tagbar'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
+Plug 'jiangmiao/auto-pairs'
 " Initialize plugin system
 call plug#end()
 
@@ -40,7 +41,8 @@ syntax on
 "语法高亮
 set hlsearch 
 "设置高亮搜索
-
+set autoread
+"改变以后自动读取
 
 "vim-colors-solarized
 syntax enable
@@ -60,6 +62,7 @@ let g:airline_theme='molokai'
 
 " NERDTree config
 noremap <F2> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 "youcompleteme
 let g:ycm_global_ycm_extra_conf = '/.vim/plugged/youcompleteme/third_party/ycmd/.ycm_extra_conf.py'
 "let g:ycm_global_ycm_extra_conf ="~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py"
@@ -78,7 +81,7 @@ noremap <S-w> :Gwrite<CR>
 noremap <S-r> :Gread<CR>
 
 noremap <C-p> :FZF /<CR>
-noremap <C-f> :Rg <CR>
+noremap <C-f> :Rg .<CR>
 
 
 "python-mode
